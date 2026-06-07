@@ -1,10 +1,4 @@
-Save this as **README.md** in your GitHub repository.
-
----
-
-# Employee Management System on AWS ECS with CI/CD
-
-## Project Overview
+project overview
 
 This project is a cloud-native Employee Management System built using Python Flask and deployed on AWS using containerized infrastructure. The application allows users to add and delete employee records through a simple web interface.
 
