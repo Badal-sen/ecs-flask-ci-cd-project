@@ -36,11 +36,9 @@ conn = get_db()
 cursor = conn.cursor()
 
 ```
-cursor.execute("""
-    SELECT id, name, position
-    FROM employees
-    ORDER BY id
-""")
+cursor.execute(
+    "SELECT id, name, position FROM employees ORDER BY id"
+)
 
 employees = cursor.fetchall()
 
