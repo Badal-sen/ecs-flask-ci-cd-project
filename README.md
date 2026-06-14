@@ -2,19 +2,24 @@
 
 ## Overview
 
-A cloud-native Employee Management System built with Flask and PostgreSQL and deployed on AWS using ECS Fargate.
+A cloud-native Employee Management System built with Flask and PostgreSQL and deployed on AWS using Amazon ECS Fargate.
 
 This project demonstrates containerization, cloud deployment, CI/CD automation, database integration, and AWS infrastructure management.
 
-## Live Features
+---
+
+## Features
 
 * Add Employee
-* View Employee List
-* Edit Employee Details
+* View Employee Records
+* Edit Employee Information
 * Delete Employee Records
 * Persistent PostgreSQL Storage
+* Responsive Web Interface
 
-## Architecture
+---
+
+## AWS Architecture
 
 GitHub Repository
 ↓
@@ -30,14 +35,18 @@ Flask Application
 ↓
 Amazon RDS PostgreSQL
 
+---
+
 ## AWS Services Used
 
 * Amazon ECS Fargate
 * Amazon ECR
 * Amazon RDS PostgreSQL
-* Application Load Balancer
+* Application Load Balancer (ALB)
 * Amazon CloudWatch
 * AWS IAM
+
+---
 
 ## Technology Stack
 
@@ -49,58 +58,104 @@ Amazon RDS PostgreSQL
 * Terraform
 * AWS
 
-## Key Achievements
-
-* Containerized application using Docker
-* Automated deployments using GitHub Actions
-* Deployed application on Amazon ECS Fargate
-* Configured PostgreSQL database on Amazon RDS
-* Implemented Application Load Balancer
-* Integrated CloudWatch logging
-* Implemented CRUD operations for employee management
-* Troubleshot ECS deployment, networking, and database connectivity issues
+---
 
 ## Screenshots
 
-### Employee Dashboard
+### Employee Management Dashboard
 
-Add screenshot here
+![Dashboard](screenshots/dashboard.png)
 
-### AWS ECS Service
+### Amazon rds
 
-Add screenshot here
+![Release](screenshots/rds.png)
+
+### ECS Service
+
+![ECS Service](screenshots/ecs_service.png)
 
 ### GitHub Actions Pipeline
 
-Add screenshot here
+![GitHub Actions](screenshots/github-actions.png)
 
-### PostgreSQL Database
 
-Add screenshot here
+
+---
 
 ## Project Structure
 
 ```text
 .
 ├── .github/workflows
-├── terraform
-├── templates
 ├── screenshots
+├── templates
+├── terraform
 ├── app.py
 ├── Dockerfile
 ├── requirements.txt
-└── README.md
+├── README.md
+└── .gitignore
 ```
+
+---
+
+## CI/CD Workflow
+
+1. Developer pushes code to GitHub
+2. GitHub Actions workflow starts
+3. Docker image is built
+4. Image is pushed to Amazon ECR
+5. Amazon ECS deploys the latest container
+6. Application becomes available through the Application Load Balancer
+
+---
+
+## Key Achievements
+
+* Containerized Flask application using Docker
+* Automated deployment using GitHub Actions
+* Deployed application on Amazon ECS Fargate
+* Integrated PostgreSQL database on Amazon RDS
+* Configured Application Load Balancer
+* Implemented CloudWatch logging
+* Built complete CRUD functionality
+* Troubleshot ECS deployments, database connectivity, and container startup issues
+
+---
+
+## Challenges Solved
+
+* ECS task startup failures
+* Docker build and deployment issues
+* PostgreSQL connectivity problems
+* Gunicorn initialization issues
+* ECS task definition revisions
+* Infrastructure drift troubleshooting
+* CI/CD deployment debugging
+
+---
 
 ## Future Improvements
 
 * Complete Terraform-managed infrastructure
 * AWS Secrets Manager integration
-* HTTPS with ACM
+* HTTPS using ACM certificates
 * ECS Auto Scaling
-* Monitoring and Alerts
+* CloudWatch Alarms and Monitoring
 * Blue/Green Deployments
+
+---
 
 ## Release
 
-Current Stable Release: v1.0-working
+**Current Stable Release:** `v1.0-working`
+
+---
+
+## Author
+
+**Badal BK**
+
+Cloud & DevOps Engineering Portfolio Project
+
+2026
