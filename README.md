@@ -76,7 +76,7 @@ Amazon RDS PostgreSQL
 
 ### GitHub Actions Pipeline
 
-![GitHub Actions](screenshots/github-actions.png)
+![GitHub Actions](screenshots/githubactions.png)
 
 
 
