@@ -1,237 +1,106 @@
-# AWS ECS + ECR + GitHub Actions CI/CD Project
+# Employee Management System on AWS
 
-A complete DevOps project demonstrating automated container deployment to AWS using Docker, Amazon ECR, Amazon ECS Fargate, and GitHub Actions.
+## Overview
 
-This project deploys a Flask-based Employee Management Dashboard with SQLite database support through a fully automated CI/CD pipeline.
+A cloud-native Employee Management System built with Flask and PostgreSQL and deployed on AWS using ECS Fargate.
 
----
+This project demonstrates containerization, cloud deployment, CI/CD automation, database integration, and AWS infrastructure management.
 
-## Project Overview
+## Live Features
 
-This project demonstrates:
-
-- Flask web application development
-- SQLite database integration
-- Docker containerization
-- Amazon Elastic Container Registry (ECR)
-- Amazon Elastic Container Service (ECS Fargate)
-- GitHub Actions CI/CD automation
-- Continuous deployment to AWS
-
----
+* Add Employee
+* View Employee List
+* Edit Employee Details
+* Delete Employee Records
+* Persistent PostgreSQL Storage
 
 ## Architecture
 
-```text
-Developer
-    │
-    ▼
 GitHub Repository
-    │
-    ▼
-GitHub Actions
-    │
-    ▼
-Docker Build
-    │
-    ▼
-Amazon ECR
-    │
-    ▼
+↓
+GitHub Actions CI/CD
+↓
+Amazon ECR (Docker Images)
+↓
 Amazon ECS Fargate
-    │
-    ▼
-Running Web Application
-```
+↓
+Application Load Balancer (ALB)
+↓
+Flask Application
+↓
+Amazon RDS PostgreSQL
 
----
+## AWS Services Used
 
-## Technologies Used
+* Amazon ECS Fargate
+* Amazon ECR
+* Amazon RDS PostgreSQL
+* Application Load Balancer
+* Amazon CloudWatch
+* AWS IAM
 
-| Technology | Purpose |
-|------------|----------|
-| Python | Backend |
-| Flask | Web Framework |
-| SQLite | Database |
-| Docker | Containerization |
-| GitHub Actions | CI/CD |
-| Amazon ECS | Container Orchestration |
-| Amazon ECR | Image Registry |
-| AWS IAM | Security & Permissions |
+## Technology Stack
 
----
+* Python
+* Flask
+* PostgreSQL
+* Docker
+* GitHub Actions
+* Terraform
+* AWS
 
-## Features
+## Key Achievements
 
-- Add Employees
-- Delete Employees
-- Employee Dashboard
-- SQLite Database Storage
-- Dockerized Application
-- Automated Deployment Pipeline
-- AWS Cloud Deployment
+* Containerized application using Docker
+* Automated deployments using GitHub Actions
+* Deployed application on Amazon ECS Fargate
+* Configured PostgreSQL database on Amazon RDS
+* Implemented Application Load Balancer
+* Integrated CloudWatch logging
+* Implemented CRUD operations for employee management
+* Troubleshot ECS deployment, networking, and database connectivity issues
 
----
+## Screenshots
+
+### Employee Dashboard
+
+Add screenshot here
+
+### AWS ECS Service
+
+Add screenshot here
+
+### GitHub Actions Pipeline
+
+Add screenshot here
+
+### PostgreSQL Database
+
+Add screenshot here
 
 ## Project Structure
 
 ```text
-aws-ecs-ecr-github-actions-ci-cd/
-│
-├── .github/
-│   └── workflows/
-│       └── deploy.yml
-│
+.
+├── .github/workflows
+├── terraform
+├── templates
+├── screenshots
 ├── app.py
-├── database.py
-├── employees.db
 ├── Dockerfile
 ├── requirements.txt
-├── README.md
-│
-└── screenshots/
-    ├── app-dashboard.png
-    ├── source-code.png
-    ├── github-actions.png
-    ├── ecr-repository.png
-    └── ecs-running-task.png
+└── README.md
 ```
-
----
-
-## CI/CD Workflow
-
-1. Developer pushes code to GitHub
-2. GitHub Actions workflow starts automatically
-3. Docker image is built
-4. Image is pushed to Amazon ECR
-5. ECS service is updated
-6. New application version is deployed automatically
-
----
-
-## Screenshots
-
-### Application Dashboard
-
-![Application Dashboard](screenshots/app-dashboard.png)
-
-### Source Code
-
-![Source Code](screenshots/source-code.png)
-
-### GitHub Actions Workflow
-
-![GitHub Actions](screenshots/github-actions.png)
-
-### Amazon ECR Repository
-
-![Amazon ECR](screenshots/ecr-repository.png)
-
-### Amazon ECS Running Task
-
-![Amazon ECS](screenshots/ecs-running-task.png)
-
----
-
-## Running Locally
-
-### Clone Repository
-
-```bash
-git clone https://github.com/Badal-sen/aws-ecs-ecr-github-actions-ci-cd.git
-cd aws-ecs-ecr-github-actions-ci-cd
-```
-
-### Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Run Application
-
-```bash
-python app.py
-```
-
-Application:
-
-```text
-http://localhost:5000
-```
-
----
-
-## Run With Docker
-
-### Build Image
-
-```bash
-docker build -t employee-dashboard .
-```
-
-### Run Container
-
-```bash
-docker run -p 5000:5000 employee-dashboard
-```
-
-Application:
-
-```text
-http://localhost:5000
-```
-
----
-
-## AWS Services Used
-
-- Amazon ECS Fargate
-- Amazon ECR
-- AWS IAM
-- AWS CloudWatch
-- GitHub Actions
-
----
-
-## DevOps Skills Demonstrated
-
-- Docker
-- AWS ECS
-- AWS ECR
-- CI/CD Pipelines
-- GitHub Actions
-- Cloud Deployment
-- Container Orchestration
-- Infrastructure Management
-
----
 
 ## Future Improvements
 
-- PostgreSQL Database
-- Terraform Infrastructure as Code
-- Application Load Balancer
-- Auto Scaling
-- HTTPS with ACM
-- Monitoring and Alerting
-- Blue/Green Deployments
+* Complete Terraform-managed infrastructure
+* AWS Secrets Manager integration
+* HTTPS with ACM
+* ECS Auto Scaling
+* Monitoring and Alerts
+* Blue/Green Deployments
 
----
+## Release
 
-## Author
-
-**Badal BK**
-
-Bachelor of Information Technology
-
-Aspiring Cloud & DevOps Engineer
-
-GitHub: https://github.com/Badal-sen
-
----
-
-## License
-
-This project is intended for educational, learning, and portfolio purposes.
+Current Stable Release: v1.0-working
